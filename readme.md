@@ -38,7 +38,6 @@ Wir verkaufen [ein unbestücktes PCB](http://my.agile-hardware.de/de/ws28xx-micr
 6. Stecke das kleine Micro USB Kabel vom WS28xx Micro Adapter in dem Arduino Micro.
 
 7. Fertig. Stecke das Netzteil in die Steckdose um deine LEDs einzuschalten.
-![GIF eines blinkenden fertigen Streifens](documentation/step7.gif)
 
 ### Steuerung
 
@@ -83,3 +82,6 @@ Es ist wichtig das die Funktion für einen gleichen `tick` Wert ein gleiches Erg
 
 Wenn du nun in [`animations.cpp`](https://www.github.com/AgileHardware/WS28xxMicroAdapter/blob/master/animations.cpp) eine neue Animation hinzugefügt hast, musst du sie nur noch in [`animations.h`](https://www.github.com/AgileHardware/WS28xxMicroAdapter/blob/master/animations.h) und [`WS28xxMicroAdapter.ino`](https://www.github.com/AgileHardware/WS28xxMicroAdapter/blob/master/WS28xxMicroAdapter.ino) mit in die Listen aufnehmen damit sie mit den Tasten ausgewählt werden kann. Außerdem muss die Anzahl aller Animation im Wert NUM_PROGRAMS in der Datei "constants.h" erhöht werden.
 Wie das geht, kannst du im Code anhand der auskommentierten Zeilen für `yourAnimation` sehen.
+
+Viel Spaß
+![GIF eines blinkenden fertigen Streifens](documentation/step7.gif)
