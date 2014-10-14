@@ -61,7 +61,7 @@ Nun kannst du das Projekt über dein Arduino IDE öffnen und auf deinen Arduino 
 
 Du kannst ganz einfach deine eigenen Animationen programmieren. Öffne dazu [das Projekt von github](https://www.github.com/AgileHardware/WS28xxMicroAdapter) in deinem Arduino IDE. 
 
-Alle Animationen sind in der Datei [`animations.cpp`](https://www.github.com/AgileHardware/WS28xxMicroAdapter) definiert. Das Grundprinzip einer Animationen ist an `yourAnimation` gut zu erkennen. Wenn du deine erste eigene Animation schreiben willst kopiere am besten diese Funktion als Ausgangsbasis, oder bearbeite sie einfach.
+Alle Animationen sind in der Datei [`animations.cpp`](https://www.github.com/AgileHardware/WS28xxMicroAdapter/blob/master/animations.cpp) definiert. Das Grundprinzip einer Animationen ist an `yourAnimation` gut zu erkennen. Wenn du deine erste eigene Animation schreiben willst kopiere am besten diese Funktion als Ausgangsbasis, oder bearbeite sie einfach.
 
 	uint16_t yourAnimation(uint16_t tick, uint32_t color) {
 		for (uint16_t i = 0; i<NUM_LEDS; i++) {
@@ -81,5 +81,5 @@ Aus dem aktuellen Wert von `tick` muss die Animationsfunktion dann das aktuelle 
 
 Es ist wichtig das die Funktion für einen gleichen `tick` Wert ein gleiches Ergebnis liefert, damit die Geschwindigkeit der Animation vom Benutzer geregelt werden kann. Sofern möglich, sollte in der Animation die Farbe die im Wert `color` übergeben wird verwendet werden.
 
-Wenn du nun in [`animations.cpp`](https://www.github.com/AgileHardware/WS28xxMicroAdapter) eine neue Animation hinzugefügt hast, musst du sie nur noch in [`animations.h`](https://www.github.com/AgileHardware/WS28xxMicroAdapter) und [`WS28xxMicroAdapter.ino`](https://www.github.com/AgileHardware/WS28xxMicroAdapter) mit in die Listen aufnehmen damit sie mit den Tasten ausgewählt werden kann. Außerdem muss die Anzahl aller Animation im Wert NUM_PROGRAMS in der Datei "constants.h" erhöht werden.
+Wenn du nun in [`animations.cpp`](https://www.github.com/AgileHardware/WS28xxMicroAdapter/blob/master/animations.cpp) eine neue Animation hinzugefügt hast, musst du sie nur noch in [`animations.h`](https://www.github.com/AgileHardware/WS28xxMicroAdapter/blob/master/animations.h) und [`WS28xxMicroAdapter.ino`](https://www.github.com/AgileHardware/WS28xxMicroAdapter/blob/master/WS28xxMicroAdapter.ino) mit in die Listen aufnehmen damit sie mit den Tasten ausgewählt werden kann. Außerdem muss die Anzahl aller Animation im Wert NUM_PROGRAMS in der Datei "constants.h" erhöht werden.
 Wie das geht, kannst du im Code anhand der auskommentierten Zeilen für `yourAnimation` sehen.
