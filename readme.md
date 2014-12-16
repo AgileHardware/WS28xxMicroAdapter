@@ -22,7 +22,8 @@ Wir verkaufen [ein unbestücktes PCB](http://my.agile-hardware.de/de/ws28xx-micr
 
 ### Aufbau
 
-1. Löte ein 5V und ein GND Kabel an den Micro-USB Stecker.
+1. Verbinde 5V und GND mit dem Micro USB Stecker. Schiebe dafür zuerst das Gehäuse auf das Kabel und dann den kleinen Kabelhalter. Danach löte die beiden Kabel auf die Seite des Steckers auf der sich 3 (nicht 2!) Kontakte befinden. Das GND Kabel (Schwarz) auf den oberen Kontakt und das 5V Kabel (Rot) auf den Unteren. Der mittlere Kontakt muss frei bleiben.
+![detailiertes Bild des microUSB steckers](documentation/microUSB_plug.jpg)
 
 2. Löte die 3 Kabel des LED Strips, die zwei Kabel der Stromversorgung und die zwei Kabel des Micro USB Anschlusses an die entsprechenden Pads.
 ![Bild inkl deutlicher Beschriftungen der Löcher + Angedeutetes Netzteil / LED Strip mit farbigen Kabeln](documentation/step2_label.jpg)
