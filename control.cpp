@@ -2,7 +2,7 @@
 
 uint8_t cycles     = 4;
 uint8_t colorIndex = 0;
-uint8_t program    = 18;
+uint8_t program    = 16;
 uint8_t brightness = 0;
 
 // the parameter that is currently being edited, see list of parameter constants
