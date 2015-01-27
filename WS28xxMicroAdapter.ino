@@ -71,8 +71,6 @@ void updateLeds() {
 }
 
 void setup() {
-  Serial.begin(9600);
-  Serial.println("Starting Serial");
   setupButtons();
   setupLeds();
 }
