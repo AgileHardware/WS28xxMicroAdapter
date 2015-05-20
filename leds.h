@@ -5,9 +5,7 @@
 #include <Arduino.h>
 #include "constants.h"
 
-#ifdef USE_WS2812
-#include <Adafruit_NeoPixel.h>
-#endif
+#include "FastLED.h"
 
 #ifdef USE_EEPROM
 #include <EEPROM.h>

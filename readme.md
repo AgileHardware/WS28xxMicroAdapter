@@ -57,6 +57,8 @@ Der Status der verschiedenen Werte wird während der Steuerung am Anfang des LED
 Unsere Software für den WS28xx Micro Adapter kannst du [hier auf github](https://www.github.com/AgileHardware/WS28xxMicroAdapter) herunterladen. Wähle die Option "Download ZIP" und kopiere den entpackten Ordner in dein Arduino Sketchbook Verzeichnis. Außerdem musst du noch die [Adafruit NeoPixel Bibliothek](https://github.com/adafruit/Adafruit_NeoPixel) [installieren](http://arduino.cc/en/Reference/Libraries).
 Nun kannst du das Projekt über dein Arduino IDE öffnen und auf deinen Arduino spielen. Verbinde dazu deinen Computer mit einem Micro USB Kabel mit dem Arduino Micro und vergiss nicht unter "Tools > Board" Arduino Micro auszuwählen.
 
+In der Datei `constants.h` musst du noch deinen LED Chipsatz auswählen (Neopixel, WS2801, ...) und die Anzahl der LEDs angeben (`NUM_LEDS`).
+
 ### Eigene Animationen
 
 Du kannst ganz einfach deine eigenen Animationen programmieren. Öffne dazu [das Projekt von github](https://www.github.com/AgileHardware/WS28xxMicroAdapter) in deinem Arduino IDE. 

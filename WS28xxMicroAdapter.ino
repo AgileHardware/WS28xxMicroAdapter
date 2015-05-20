@@ -1,6 +1,4 @@
-#ifdef USE_WS2812
-#include <Adafruit_NeoPixel.h>
-#endif
+#include "FastLED.h"
 
 #ifdef USE_EEPROM
 #include <EEPROM.h>
@@ -59,10 +57,7 @@ void updateLeds() {
     stateTick  = (stateTick+1) % stateTicks;
   }
 
-  #ifdef USE_WS2812
   showLeds();
-  #endif
-
 
   loopNum = (loopNum + 1) % cycles;
   if (loopNum == 0) {
