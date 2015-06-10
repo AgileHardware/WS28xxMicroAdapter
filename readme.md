@@ -1,6 +1,6 @@
 ## WS28xx Micro Adapter
 
-LED Streifen mit WS2801/11 Steuerungschips ermöglichen das einzelne Ansteuern der Farbe jeder einzelnen LED. Dadurch ist es möglich vielfältige und hübsche Animationen zu gestalten.
+Digitale LED Streifen mit integrierten Steuerungschips in jeder LED ermöglichen das einzelne Ansteuern der Farbe jeder einzelnen LED. Dadurch ist es möglich vielfältige und hübsche Animationen zu gestalten.
 
 Das macht sehr viel Spaß, das Betreiben dieser Streifen ist aber leider nicht ganz einfach. Außerdem braucht man noch ein zusätzliches Interface wenn man zum Beispiel zwischen verschiedenen Animationen wählen möchte.
 
@@ -20,7 +20,13 @@ Wir verkaufen [ein unbestücktes PCB](http://my.agile-hardware.de/de/ws28xx-micr
 - 5V Netzteil mit GND und VCC Kabeln die auf die Pads gelötet werden können.
 - Kompatibler LED Streifen, z.B. Adafruit Neopixel Produkte. [Kompatible Produkte in unserem Shop](http://my.agile-hardware.de/de/search?page=search&page_action=query&desc=on&sdesc=on&keywords=ws8xx)
 
+### Kompatible LEDs
+
+Hier beschreiben wir, wie ein LED-Strip mit WS2812 (NeoPixel) angeschlossen werden kann. Seit der neusten Version unserer Software, die nun auf [FastLED](http://fastled.io) aufbaut, kann auch [eine Vielzahl anderer Chipsätze](https://github.com/FastLED/FastLED/wiki/Overview#chipsets) verwendet werden. Getestet haben wir bis jetzt mit NeoPixel und WS2801 LEDs. Über Rückmeldungen zu anderen LEDs freuen wir uns sehr.
+
 ### Aufbau
+
+Achtung: Digitale LEDs und insbesondere die Neopixel sind sehr empfindlich für elektrostatische Entladungen. Also bei der Arbeit mit diesen Bauteilen immer auf gute Erdung achten.
 
 1. Verbinde 5V und GND mit dem Micro USB Stecker. Schiebe dafür zuerst das Gehäuse auf das Kabel und dann den kleinen Kabelhalter. Danach löte die beiden Kabel auf die Seite des Steckers auf der sich 3 (nicht 2!) Kontakte befinden. Das GND Kabel (Schwarz) auf den oberen Kontakt und das 5V Kabel (Rot) auf den Unteren. Der mittlere Kontakt muss frei bleiben.
 ![detailiertes Bild des microUSB steckers](documentation/microUSB_plug.jpg)
@@ -38,7 +44,16 @@ Wir verkaufen [ein unbestücktes PCB](http://my.agile-hardware.de/de/ws28xx-micr
 
 6. Stecke das kleine Micro USB Kabel vom WS28xx Micro Adapter in dem Arduino Micro.
 
-7. Fertig. Stecke das Netzteil in die Steckdose um deine LEDs einzuschalten.
+7. Spiele die Software auf den Arduino Micro, wie im nächsten Abschnitt beschrieben wird.
+
+8. Fertig. Stecke das Netzteil in die Steckdose um deine LEDs einzuschalten.
+
+### Software aufspielen
+
+Unsere Software für den WS28xx Micro Adapter kannst du [hier auf github](https://www.github.com/AgileHardware/WS28xxMicroAdapter) herunterladen. Wähle die Option "Download ZIP" und kopiere den entpackten Ordner in dein Arduino Sketchbook Verzeichnis. Außerdem musst du noch die [Adafruit NeoPixel Bibliothek](https://github.com/adafruit/Adafruit_NeoPixel) [installieren](http://arduino.cc/en/Reference/Libraries).
+Nun kannst du das Projekt über dein Arduino IDE öffnen und auf deinen Arduino spielen. Verbinde dazu deinen Computer mit einem Micro USB Kabel mit dem Arduino Micro und vergiss nicht unter "Tools > Board" Arduino Micro auszuwählen.
+
+In der Datei `constants.h` musst du noch deinen LED Chipsatz auswählen (Neopixel, WS2801, ...) und die Anzahl der LEDs angeben (`NUM_LEDS`).
 
 ### Steuerung
 
@@ -51,13 +66,6 @@ Der LED Streifen kann über die 3 Buttons auf dem WS28xx Micro Adapter gesteuert
 4. Helligkeit
 
 Der Status der verschiedenen Werte wird während der Steuerung am Anfang des LED Streifens angezeigt.
-
-### Software aufspielen
-
-Unsere Software für den WS28xx Micro Adapter kannst du [hier auf github](https://www.github.com/AgileHardware/WS28xxMicroAdapter) herunterladen. Wähle die Option "Download ZIP" und kopiere den entpackten Ordner in dein Arduino Sketchbook Verzeichnis. Außerdem musst du noch die [Adafruit NeoPixel Bibliothek](https://github.com/adafruit/Adafruit_NeoPixel) [installieren](http://arduino.cc/en/Reference/Libraries).
-Nun kannst du das Projekt über dein Arduino IDE öffnen und auf deinen Arduino spielen. Verbinde dazu deinen Computer mit einem Micro USB Kabel mit dem Arduino Micro und vergiss nicht unter "Tools > Board" Arduino Micro auszuwählen.
-
-In der Datei `constants.h` musst du noch deinen LED Chipsatz auswählen (Neopixel, WS2801, ...) und die Anzahl der LEDs angeben (`NUM_LEDS`).
 
 ### Eigene Animationen
 
