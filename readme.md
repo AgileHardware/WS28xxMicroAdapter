@@ -73,16 +73,16 @@ Du kannst ganz einfach deine eigenen Animationen programmieren. Öffne dazu [das
 
 Alle Animationen sind in der Datei [`animations.cpp`](https://www.github.com/AgileHardware/WS28xxMicroAdapter/blob/master/animations.cpp) definiert. Das Grundprinzip einer Animationen ist an `yourAnimation` gut zu erkennen. Wenn du deine erste eigene Animation schreiben willst kopiere am besten diese Funktion als Ausgangsbasis, oder bearbeite sie einfach.
 
-	uint16_t yourAnimation(uint16_t tick, uint32_t color) {
-		for (uint16_t i = 0; i<NUM_LEDS; i++) {
-			if(i == tick) {
-				setLedColor(i, color);
-			} else {
-				setLedColor(i, BLACK);
-			}
-		}
-		return NUM_LEDS;
-	}
+    uint16_t yourAnimation(uint16_t tick, uint32_t color) {
+        for (uint16_t i = 0; i<NUM_LEDS; i++) {
+            if(i == tick) {
+                setLedColor(i, color);
+            } else {
+                setLedColor(i, BLACK);
+            }
+        }
+        return NUM_LEDS;
+    }
 
 Der Wert `tick` steuert der den Ablauf der Animation.
 Jede Animationsfunktion gibt in ihrem Rückgabewert an, wie viele Schritte die Animation hat. Die Funktion wird dann zu jedem Schritt mit einem erhöhten Wert für `tick` aufgerufen, bis die volle Schrittzahl erreicht ist. Dann beginnt `tick` wieder bei 0.

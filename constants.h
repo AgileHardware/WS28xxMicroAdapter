@@ -37,8 +37,8 @@
 #define STATE_MODE_WIDTH            8
 #define STATE_VALUE_WIDTH           8
 #define STATE_DISPLAY_TIMEOUT       4000
-#define STATE_VALUE_OFFSET 			    STATE_BORDER_WIDTH * 2 + STATE_MODE_WIDTH
-#define STATE_MAX_BINARY_VALUE		    STATE_VALUE_WIDTH^2 - 1
+#define STATE_VALUE_OFFSET          STATE_BORDER_WIDTH * 2 + STATE_MODE_WIDTH
+#define STATE_MAX_BINARY_VALUE      STATE_VALUE_WIDTH^2 - 1
 
 // Pin assignment on the Arduino
 #define PIN_DATA        0

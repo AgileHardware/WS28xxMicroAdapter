@@ -48,19 +48,19 @@ void prepareLeds(uint8_t brightnessParam) {
   uint8_t brightness255;
   uint8_t brightnessNoZero = brightnessParam + 1;
 
-	brightness255 = map(brightnessNoZero, 1, NUM_BRIGHTNESS, 15, 255);
-	FastLED.setBrightness(brightness255);
+  brightness255 = map(brightnessNoZero, 1, NUM_BRIGHTNESS, 15, 255);
+  FastLED.setBrightness(brightness255);
 }
 
 void showLeds() {
-	FastLED.show();
+  FastLED.show();
 }
 
 uint32_t getLedColor(uint16_t index) {
   uint32_t red    = leds[index].red;
   uint32_t green  = leds[index].green;
   uint32_t blue   = leds[index].blue;
-  
+
   return (red<<16)+(green<<8)+blue;
 }
 
@@ -107,6 +107,6 @@ uint32_t brighten8(uint32_t color, uint8_t levels) {
 }
 
 uint32_t getPaletteColorAtIndex(uint8_t index) {
-	return colors[index];
+  return colors[index];
 }
 
