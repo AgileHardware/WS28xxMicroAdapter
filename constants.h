@@ -19,7 +19,7 @@
 // #define USE_LPD8806
 
 // Maximum / Total available Numbers for a bunch of stuff
-#define NUM_LEDS        46
+#define NUM_LEDS        144
 #define NUM_COLORS      8
 // The first program is 0. If you just added programm 21, make NUM_PROGRAMS 22.
 #define NUM_PROGRAMS    21
@@ -27,6 +27,10 @@
 #define NUM_CYCLES      8
 #define NUM_BRIGHTNESS  8
 #define NUM_PARAMETERS  4
+
+// Factor by which animations are slowed down
+// You can adjust this if you think animations run to slow or to fast. 1 means no slowdown, higher numbers = more slow
+#define SLOWDOWN_CYCLES 144 / NUM_LEDS
 
 // display style for state display
 // STATE_VALUE_WIDTH should be a minimum of 5, if you want to display all values including the selected program. Values up to 32 (2^STATE_VALUE_WIDTH) can be shown in binary. For higher values the area will be blank.

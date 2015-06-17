@@ -59,13 +59,14 @@ void updateLeds() {
 
   showLeds();
 
-  loopNum = (loopNum + 1) % cycles;
+  loopNum = (loopNum + 1) % (cycles * SLOWDOWN_CYCLES);
   if (loopNum == 0) {
     tick = (tick + 1) % ticks;
   }
 }
 
 void setup() {
+  Serial.begin(9600);
   setupButtons();
   setupLeds();
 }
