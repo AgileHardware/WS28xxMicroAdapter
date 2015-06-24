@@ -47,6 +47,7 @@ void updateLeds() {
     case 18: ticks = tinyExplosions     (tick, color); break;
     case 19: ticks = twinkleTwinkle     (tick, color, cycles); break;
     case 20: ticks = breathe            (tick, color); break;
+    case 21: ticks = fire2012           (tick, color); break;
     // add your own animations here. Don't forget to also increment the NUM_PROGRAMS value in "constants.h"
     // define new animations in "animations.cpp" / "animations.h"
     // case 21: ticks = yourAnimation   (tick, color); break;
@@ -66,7 +67,6 @@ void updateLeds() {
 }
 
 void setup() {
-  Serial.begin(9600);
   setupButtons();
   setupLeds();
 }

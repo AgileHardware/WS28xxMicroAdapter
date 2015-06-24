@@ -36,5 +36,6 @@ uint16_t dryPixelParty      (uint16_t tick, uint32_t color);
 uint16_t uniformPixelParty  (uint16_t tick, uint32_t color);
 uint16_t dimRider           (uint16_t tick, uint32_t color);
 uint16_t breathe            (uint16_t tick, uint32_t color);
+uint16_t fire2012           (uint16_t tick, uint32_t color);
 
 #endif

@@ -408,9 +408,52 @@ uint16_t breathe(uint16_t tick, uint32_t color) {
     dimBy = 255;
   }
   for (uint16_t i=0; i<NUM_LEDS; i++) {
-      setLedColor(i, dim256(color, dimBy * 8));
+      setLedColor(i, dim8(color, dimBy * 8));
   }
 
   return 64;
+}
+
+#define SPARKING  150
+#define COOLING   55
+
+uint16_t fire2012(uint16_t tick, uint32_t color) {
+  // Fire2012 by Mark Kriegsman, July 2012
+  // as part of "Five Elements" shown here: http://youtu.be/knWiGsmgycY
+  // adapted from example included with fastLED
+  if(tick == 0) {
+    random16_add_entropy( random());
+
+    static byte heat[NUM_LEDS];
+
+    // Array of temperature readings at each simulation cell
+    // Step 1.  Cool down every cell a little
+    for( int i = 0; i < NUM_LEDS; i++) {
+      heat[i] = qsub8( heat[i],  random8(0, ((COOLING * 10) / NUM_LEDS) + 2));
+    }
+
+    // Step 2.  Heat from each cell drifts 'up' and diffuses a little
+    for( int k= NUM_LEDS - 1; k >= 2; k--) {
+      heat[k] = (heat[k - 1] + heat[k - 2] + heat[k - 2] ) / 3;
+    }
+
+    // Step 3.  Randomly ignite new 'sparks' of heat near the bottom
+    if( random8() < SPARKING) {
+      int y = random8(7);
+      heat[y] = qadd8( heat[y], random8(160,255) );
+    }
+
+    // Step 4.  Map from heat cells to LED colors
+    for( int j = 0; j < NUM_LEDS; j++) {
+      CRGB hColor = HeatColor(heat[j]);
+      uint32_t red    = hColor.red;
+      uint32_t green  = hColor.green;
+      uint32_t blue   = hColor.blue;
+
+      uint32_t intColor = (red<<16)+(green<<8)+blue;
+      setLedColor(j, intColor);
+    }
+  }
+  return 4;
 }
 
