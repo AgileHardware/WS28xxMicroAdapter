@@ -444,14 +444,14 @@ uint16_t fire2012(uint16_t tick, uint32_t color) {
     }
 
     // Step 4.  Map from heat cells to LED colors
-    for( int j = 0; j < NUM_LEDS; j++) {
+    for(uint16_t j = 0; j < NUM_LEDS; j++) {
       CRGB hColor = HeatColor(heat[j]);
       uint32_t red    = hColor.red;
       uint32_t green  = hColor.green;
       uint32_t blue   = hColor.blue;
 
       uint32_t intColor = (red<<16)+(green<<8)+blue;
-      setLedColor(j, intColor);
+      setLedColor(j, HeatColor(heat[j]));
     }
   }
   return 4;

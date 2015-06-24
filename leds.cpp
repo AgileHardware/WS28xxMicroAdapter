@@ -50,6 +50,10 @@ void setupLeds() {
   // FastLED.setTemperature(Candle);
 }
 
+void setLedColor(uint16_t index, CRGB color) {
+  leds[index] = color;
+}
+
 void setLedColor(uint16_t index, uint32_t color) {
   leds[index] = color;
 }

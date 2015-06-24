@@ -18,6 +18,7 @@ void showLeds();
 
 void setUndimmedLedColor  (uint16_t index, uint32_t color);
 void setLedColor          (uint16_t index, uint32_t color);
+void setLedColor          (uint16_t index, CRGB color);
 uint32_t getLedColor      (uint16_t index);
 
 uint32_t dim8             (uint32_t color, uint8_t levels);
