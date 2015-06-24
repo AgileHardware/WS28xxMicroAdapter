@@ -2,7 +2,7 @@
 #define __constants_h__
 
 // uncomment only the LED chipset you are using
-// we have only tested with NEOPIXEL and WS2801 so far
+// we have only tested with NEOPIXEL, WS2801 and APA102 (aka adafruit DotStar) so far
 // #define USE_TM1803
 // #define USE_TM1804
 // #define USE_TM1809
@@ -17,6 +17,7 @@
 // #define USE_WS2801
 // #define USE_SM16716
 // #define USE_LPD8806
+// #define USE_APA102
 
 // Maximum / Total available Numbers for a bunch of stuff
 #define NUM_LEDS        144

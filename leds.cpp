@@ -37,7 +37,17 @@ void setupLeds() {
     FastLED.addLeds<SM16716, PIN_DATA, PIN_CLK, RGB>(leds, NUM_LEDS);
   #elif defined(USE_LPD8806)
     FastLED.addLeds<LPD8806, PIN_DATA, PIN_CLK, RGB>(leds, NUM_LEDS);
+  #elif defined(USE_APA102)
+    FastLED.addLeds<APA102, PIN_DATA, PIN_CLK, GBR>(leds, NUM_LEDS);
   #endif
+
+  // White Point
+  // Adjust this value so that 0xFFFFFF displays as a neutral blue-ish white on your LED Strip.
+  // The lower you go, the more brightness you loose, so try to find the closest value to 0xFFFFFF that looks right. At least one color should be FF.
+  // FastLED.setCorrection(0x80FFFF);
+
+  // If you dont actually want a blueish white, you can choose a different color temperature. http://fastled.io/docs/3.1/group___color_enums.html
+  // FastLED.setTemperature(Candle);
 }
 
 void setLedColor(uint16_t index, uint32_t color) {
