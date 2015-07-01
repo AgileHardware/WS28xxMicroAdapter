@@ -9,8 +9,8 @@
 // #define USE_WS2811
 // #define USE_WS2812
 // #define USE_WS2812B
-#define USE_NEOPIXEL
-// #define USE_UCS1903
+// #define USE_NEOPIXEL
+#define USE_UCS1903
 // #define USE_UCS1903B
 // #define USE_GW6205
 // #define USE_GW6205_400
@@ -24,7 +24,7 @@
 #define NUM_LEDS        144
 
 // The first program is 0. If you just added programm 21, make NUM_PROGRAMS 22.
-#define NUM_PROGRAMS    21
+#define NUM_PROGRAMS    22
 
 // Factor by which animations are slowed down
 // You can adjust this if you think animations run to slow or to fast. 1 means no slowdown, higher numbers = more slow
