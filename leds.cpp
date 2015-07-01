@@ -39,6 +39,8 @@ void setupLeds() {
     FastLED.addLeds<LPD8806, PIN_DATA, PIN_CLK, RGB>(leds, NUM_LEDS);
   #elif defined(USE_APA102)
     FastLED.addLeds<APA102, PIN_DATA, PIN_CLK, GBR>(leds, NUM_LEDS);
+  #elif defined(USE_P9813)
+    FastLED.addLeds<P9813, PIN_DATA, PIN_CLK>(leds, NUM_LEDS);
   #endif
 
 

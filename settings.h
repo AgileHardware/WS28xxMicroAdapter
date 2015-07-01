@@ -18,6 +18,7 @@
 // #define USE_SM16716
 // #define USE_LPD8806
 // #define USE_APA102
+// #define USE_P9813
 
 // Number of LEDs in your Strip
 #define NUM_LEDS        144
