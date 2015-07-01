@@ -4,6 +4,7 @@
 
 #include <Arduino.h>
 #include "constants.h"
+#include "settings.h"
 #include "leds.h"
 
 // All animations described in "animations.cpp" need to be added here

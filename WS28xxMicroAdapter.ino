@@ -5,6 +5,7 @@
 #endif
 
 #include "constants.h"
+#include "settings.h"
 #include "leds.h"
 #include "control.h"
 #include "state_display.h"

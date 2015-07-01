@@ -1,49 +1,12 @@
 #ifndef __constants_h__
 #define __constants_h__
 
-// uncomment only the LED chipset you are using
-// we have only tested with NEOPIXEL, WS2801 and APA102 (aka adafruit DotStar) so far
-// #define USE_TM1803
-// #define USE_TM1804
-// #define USE_TM1809
-// #define USE_WS2811
-// #define USE_WS2812
-// #define USE_WS2812B
-#define USE_NEOPIXEL
-// #define USE_UCS1903
-// #define USE_UCS1903B
-// #define USE_GW6205
-// #define USE_GW6205_400
-// #define USE_WS2801
-// #define USE_SM16716
-// #define USE_LPD8806
-// #define USE_APA102
-
 // Maximum / Total available Numbers for a bunch of stuff
-#define NUM_LEDS        144
 #define NUM_COLORS      8
-// The first program is 0. If you just added programm 21, make NUM_PROGRAMS 22.
-#define NUM_PROGRAMS    21
 #define NUM_BUTTONS     3
 #define NUM_CYCLES      8
 #define NUM_BRIGHTNESS  8
 #define NUM_PARAMETERS  4
-
-// Factor by which animations are slowed down
-// You can adjust this if you think animations run to slow or to fast. 1 means no slowdown, higher numbers = more slow
-#define SLOWDOWN_CYCLES 144 / NUM_LEDS
-
-// display style for state display
-// STATE_VALUE_WIDTH should be a minimum of 5, if you want to display all values including the selected program. Values up to 32 (2^STATE_VALUE_WIDTH) can be shown in binary. For higher values the area will be blank.
-// STATE_MODE_WIDTH can be set to 1 and you can still distinguish the mode by the color of the single LED (orange = program, green = color, blue = cycles, white = brightness)
-// Set all to 0 to disable state display completely
-#define STATE_BORDER_WIDTH          1
-#define STATE_BORDER_COLOR          GREY
-#define STATE_MODE_WIDTH            8
-#define STATE_VALUE_WIDTH           8
-#define STATE_DISPLAY_TIMEOUT       4000
-#define STATE_VALUE_OFFSET          STATE_BORDER_WIDTH * 2 + STATE_MODE_WIDTH
-#define STATE_MAX_BINARY_VALUE      STATE_VALUE_WIDTH^2 - 1
 
 // Pin assignment on the Arduino
 #define PIN_DATA        0

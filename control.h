@@ -4,6 +4,7 @@
 
 #include <Arduino.h>
 #include "constants.h"
+#include "settings.h"
 
 
 void setupButtons();
