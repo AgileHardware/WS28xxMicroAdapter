@@ -9,12 +9,13 @@
 // #define USE_WS2811
 // #define USE_WS2812
 // #define USE_WS2812B
-// #define USE_NEOPIXEL
-#define USE_UCS1903
+#define USE_NEOPIXEL
+// #define USE_UCS1903
 // #define USE_UCS1903B
 // #define USE_GW6205
 // #define USE_GW6205_400
-// #define USE_WS2801
+// #define USE_WS2801_RGB
+// #define USE_WS2801_BGR
 // #define USE_SM16716
 // #define USE_LPD8806
 // #define USE_APA102

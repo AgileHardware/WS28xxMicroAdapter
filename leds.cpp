@@ -31,8 +31,10 @@ void setupLeds() {
     FastLED.addLeds<GW6205, PIN_DATA, RGB>(leds, NUM_LEDS);
   #elif defined(USE_GW6205_400)
     FastLED.addLeds<GW6205_400, PIN_DATA, RGB>(leds, NUM_LEDS);
-  #elif defined(USE_WS2801)
+  #elif defined(USE_WS2801_RGB)
     FastLED.addLeds<WS2801, PIN_DATA, PIN_CLK, RGB>(leds, NUM_LEDS);
+  #elif defined(USE_WS2801_BGR)
+    FastLED.addLeds<WS2801, PIN_DATA, PIN_CLK, BGR>(leds, NUM_LEDS);
   #elif defined(USE_SM16716)
     FastLED.addLeds<SM16716, PIN_DATA, PIN_CLK, RGB>(leds, NUM_LEDS);
   #elif defined(USE_LPD8806)
